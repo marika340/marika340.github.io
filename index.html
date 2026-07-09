@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marika Nishi | Robotics Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-2: #a78bfa;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, var(--bg), #020617);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 80px 0 50px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .nav-links a {
+      margin-left: 22px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.18rem;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #020617;
+    }
+
+    section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #f9fafb;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 0.82rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #1e293b;
+      color: #cbd5e1;
+    }
+
+    .experience-item {
+      margin-bottom: 28px;
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .experience-top h3 {
+      color: #f9fafb;
+    }
+
+    .date {
+      color: var(--accent-2);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #1e293b;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 9px 12px;
+      color: #d1d5db;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="container">
+    <div class="logo">Marika Nishi</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container hero">
+      <h1>Robotics engineer focused on <span>autonomous driving</span>, perception, and intelligent systems.</h1>
+      <p>
+        I am a Robotics MSE student at the University of Pennsylvania with experience in autonomous driving,
+        computer vision, sensor fusion, ROS, simulation, and machine learning-based control.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="Marika_Nishi_Resume.pdf" target="_blank">Download Resume</a>
+        <a class="btn" href="mailto:mari3511n@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I study Robotics and Computer Science with a concentration in Computer Vision at the University of Pennsylvania.
+        My work spans autonomous truck failure analysis, event-camera driving simulation, mobile robot design, LiDAR-based
+        tracking, and real-time collision prediction systems.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>University of Pennsylvania</h3>
+          <p>Master of Science in Engineering, Robotics and Computer Science</p>
+          <p>Concentration: Computer Vision</p>
+          <p>Expected May 2027 · GPA: 3.78/4.0</p>
+        </div>
+        <div class="card">
+          <h3>University of Tokyo</h3>
+          <p>Bachelor of Engineering, Mechanical Engineering</p>
+          <p>March 2023 · GPA: 3.64/4.0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Mobile Robots Competition</h3>
+          <p>
+            Designed and fabricated a mobile robot using CAD, laser cutting, and 3D printing. Wrote embedded C code
+            for motor control, ToF wall-following, and a wireless web interface using UDP and IP.
+          </p>
+          <p><strong>Result:</strong> Awarded 2nd place in the final competition.</p>
+          <div class="tag-list">
+            <span class="tag">C</span><span class="tag">Arduino</span><span class="tag">CAD</span><span class="tag">Control</span><span class="tag">Microcontroller</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Event Camera Driving Simulation</h3>
+          <p>
+            Implemented driving simulators for visualizing event-camera data on an F1TENTH car using Gazebo, CARLA,
+            and ROS. Collected datasets and trained a vision transformer model to compute motion control from event images.
+          </p>
+          <p><strong>Impact:</strong> Improved data generation efficiency by reducing redundancy and cutting time by 70%.</p>
+          <div class="tag-list">
+            <span class="tag">ROS</span><span class="tag">Gazebo</span><span class="tag">CARLA</span><span class="tag">PyTorch</span><span class="tag">Vision Transformer</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Traffic Collision Prediction System</h3>
+          <p>
+            Designed and built a real-time collision prediction system among pedestrians, cyclists, and an intelligent wheelchair.
+            Implemented C++ ROS code for LiDAR-based detection and used Extended Kalman Filter sensor fusion for position estimation.
+          </p>
+          <div class="tag-list">
+            <span class="tag">C++</span><span class="tag">ROS</span><span class="tag">LiDAR</span><span class="tag">EKF</span><span class="tag">Sensor Fusion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-top">
+          <h3>ISUZU · Advanced Engineering - AI & Autonomous Driving Intern</h3>
+          <span class="date">May 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Investigate autonomous truck on-road test failures across a large-scale Bazel-based perception, planning, and control software stack.</li>
+          <li>Use SQL to analyze autonomous driving test data and quantitatively evaluate stack performance.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-top">
+          <h3>Vijay Kumar Lab · Research Intern</h3>
+          <span class="date">May 2025 – May 2026</span>
+        </div>
+        <ul>
+          <li>Implemented event-camera driving simulators using Gazebo, CARLA, and ROS.</li>
+          <li>Trained vision transformer models for motion control from event-camera images.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-top">
+          <h3>BOSCH · Software Intern</h3>
+          <span class="date">August 2023 – September 2023</span>
+        </div>
+        <ul>
+          <li>Built MATLAB-based maps for autonomous driving and ADAS signal visualization.</li>
+          <li>Improved CAN signal processing by fixing decoding issues and refining output accuracy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">PyTorch</span>
+        <span class="skill">C++</span>
+        <span class="skill">C</span>
+        <span class="skill">MATLAB</span>
+        <span class="skill">ROS</span>
+        <span class="skill">OpenCV</span>
+        <span class="skill">SLAM</span>
+        <span class="skill">Sensor Fusion</span>
+        <span class="skill">Computer Vision</span>
+        <span class="skill">Gazebo</span>
+        <span class="skill">MuJoCo</span>
+        <span class="skill">CUDA</span>
+        <span class="skill">LiDAR</span>
+        <span class="skill">IMU</span>
+        <span class="skill">GPS</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card">
+        <p>
+          Hori, K., Watanabe, K., Tanaka, T., Nishi, M., & Ito, T. (2026). Visibility Evaluation Around Unsignalized Intersections
+          with Occlusion From Arbitrary On-road Viewpoints Using Point Cloud Maps.
+        </p>
+        <br />
+        <p>
+          Watanabe, K., Nishi, M., & Ito, T. (2025). Placement design of various roadside sensors for stochastic position prediction
+          of traffic participants on community roads.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mari3511n@gmail.com">mari3511n@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/marika-nishi/" target="_blank">linkedin.com/in/marika-nishi</a></p>
+      <p>GitHub: <a href="https://github.com/marika340" target="_blank">github.com/marika340</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Marika Nishi. Built with HTML and CSS.</p>
+  </footer>
+</body>
+</html>
