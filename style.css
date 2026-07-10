@@ -106,9 +106,9 @@ header {
   object-fit: cover; */
   /* border: 5px solid var(--accent);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); */
-  width: 26px !important;
-  height: 26px !important;
-  max-width: 26px !important;
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -247,8 +247,8 @@ footer {
   }
 
   .profile-pic {
-    width: 26px;
-    height: 26px;
+    width: 100px;
+    height: 100px;
   }
 
   .buttons {
