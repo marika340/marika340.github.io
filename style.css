@@ -250,11 +250,13 @@ footer {
     height: 200px !important;
     min-width: 200px;
     min-height: 200px; */
-    flex: 0 0 320px;
-    width: 320px;
-    height: 400px;
+    width: 320px !important;
+    height: 400px !important;
+    min-width: 320px !important;
+    min-height: 400px !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
     object-fit: cover;
-    border-radius: 0;
   }
 
   .buttons {
