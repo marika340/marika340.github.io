@@ -100,8 +100,8 @@ header {
 }
 
 .profile-pic {
-  width: 260px;
-  height: 260px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--accent);
