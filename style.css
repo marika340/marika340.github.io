@@ -102,14 +102,13 @@ header {
 .profile-pic {
   /* display: block; */
   flex: 0 0 320px;
-  width: 320px !important;
-  height: 400px !important;
+  width: 320px;
+  height: 400px;
   /* min-width: 320px;
   min-height: 400px; */
   /* max-width: none !important; */
   object-fit: cover;
-  border-radius: 12px; /* Rounded corners instead of a circle */
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border-radius: 0;
 }
 
 .buttons {
