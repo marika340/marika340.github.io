@@ -100,15 +100,9 @@ header {
 }
 
 .profile-pic {
-  /* width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  object-fit: cover; */
-  /* border: 5px solid var(--accent);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); */
-  width: 100px !important;
-  height: 100px !important;
-  max-width: 100px !important;
+  width: 800px !important;
+  height: 800px !important;
+  max-width: 800px !important;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -247,8 +241,8 @@ footer {
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 800px;
+    height: 800px;
   }
 
   .buttons {
