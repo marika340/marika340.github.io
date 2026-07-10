@@ -100,15 +100,15 @@ header {
 }
 
 .profile-pic {
-  /* display: block; */
   flex: 0 0 320px;
   width: 320px;
   height: 400px;
-  /* min-width: 320px;
-  min-height: 400px; */
-  /* max-width: none !important; */
+
   object-fit: cover;
-  border-radius: 0;
+
+  border-radius: 16px;      /* Rounded corners */
+  border: 2px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
 }
 
 .buttons {
@@ -245,18 +245,12 @@ footer {
   }
 
   .profile-pic {
-    /* flex-basis: 200px;
-    width: 200px !important;
-    height: 200px !important;
-    min-width: 200px;
-    min-height: 200px; */
-    width: 320px !important;
-    height: 400px !important;
-    min-width: 320px !important;
-    min-height: 400px !important;
-    border-radius: 0 !important;
-    clip-path: none !important;
+    width: 240px;
+    height: 300px;
+    flex: 0 0 240px;
+
     object-fit: cover;
+    border-radius: 16px;
   }
 
   .buttons {
