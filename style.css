@@ -103,11 +103,12 @@ header {
   display: block;
   flex: 0 0 320px;
   width: 320px !important;
-  height: 320px !important;
+  height: 400px !important;
   min-width: 320px;
-  min-height: 320px;
+  min-height: 400px;
   max-width: none !important;
-  border-radius: 50%;
+  border-radius: 12px; /* Rounded corners instead of a circle */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
   object-fit: cover;
 }
 
