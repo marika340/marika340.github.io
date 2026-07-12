@@ -257,14 +257,22 @@ footer {
     justify-content: center;
   }
 
-  .project-video {
-    display: block;
+  .shorts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 320px));
+    justify-content: center;
+    gap: 16px;
+    margin: 16px 0 20px;
+  }
+
+  .shorts-grid .video-wrapper {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 14px 0 18px;
-    background: #020617;
-    border: 1px solid var(--border);
+    margin: 0;
+  }
+
+  @media (max-width: 650px) {
+    .shorts-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
