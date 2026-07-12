@@ -256,4 +256,15 @@ footer {
   .buttons {
     justify-content: center;
   }
+
+  .project-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 14px 0 18px;
+    background: #020617;
+    border: 1px solid var(--border);
+  }
 }
