@@ -275,4 +275,11 @@ footer {
       grid-template-columns: 1fr;
     }
   }
+
+  .project-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+  }
 }
